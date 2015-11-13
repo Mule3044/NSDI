@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>NSDI of Ethiopia </title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css" title="style" />
+</head>
+
+<body>
+
+  <div id="main">
+    <div id="header"><br>
+	<form method="post" action="#" id="search_form">
+	
+          
+        </form>
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">   <i> NSDI of Ethiopia  </i>   </a></h1>
+       
+
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">Home</a></li>
+          <li><a href='{% url "layer" %}'>Layer</a></li>
+          <li><a href='{% url "join" %}'>Map</a></li>
+
+          <li><a href='/admin/'>people</a></li>
+          <li><a href="uploaddocument.html">Document </a></li>
+		 
+		  <li><a href="search.html">search</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;
+		  <select name="Language">
+                    <option value="English">Englis</option>
+                     <option value="Amharic">Amharic</option>
+                  </select>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+	   <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+        <!-- insert your sidebar items here -->
+        <h3>Latest Layer</h3>
+       <p>the latest layer is available here</p>
+        <h3>Latest Map</h3>
+
+       
+      </div>
+      <div id="content">
+	  	<html>
+  <head>
+    <style>
+      #map {
+        width: 580px;
+        height: 400px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(9.03 , 38.74),
+          zoom: 3,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map">
+	</div>
+  </body>
+</html>			
+        <!-- insert the page content here -->
+        <h1>Welcome to NSDI of Ethiopia</h1>
+        <p>OGC and OpenGIS are trademarks of the Open Geospatial Consortium, Inc.  Specific vendor products mentioned in this document are trademarked by their respective companies.  Discussion of any vendor products in this document is solely for describing examples of data server architectures currently in community practice, and does not represent any endorsement by the Open Geospatial Consortium, Inc.  , which means that you are free to download and use it for anything you want (including modifying and amending it). All I ask is that you leave the 'design from HTML5webtemplates.co.uk' link in the footer of the template, but other than that...</p>
+        
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+<p>      Copyright @ NSDI Team 2015</p>
+    </div>
+  </div>
+</body>
+</html>
